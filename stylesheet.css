@@ -3,15 +3,16 @@
   height: auto;
 }
 header {
-  background-color: #2b2768;
+  background-color: #8e89cb;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
 }
+
 body {
-  background-color: #2b2768;
+  background-color: #8e89cb;
 }
 .container {
   max-width: 900px;

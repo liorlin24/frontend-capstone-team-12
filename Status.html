@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בירור סטטוס פנייה</title>
+            <link rel="stylesheet" href="stylesheet.css">
+    <style> 
+        
+    </style>
+</head>
+<body>
+    <h1>בדיקת סטטוס פנייה</h1>
+    <p>הזן את מספר הפנייה על מנת לראות את מצבה</p>
+
+    <form action="#" method="get" name="check" id="check-status-form">
+                <h2></h2><strong>איתור פנייה</strong></h2>
+                
+                <p>
+                    <label for="ticket-number">מספר פנייה</label><br>
+                    <input type="text" id="ticket-number" name="ticket-id" placeholder="לדוגמה: #123456" required>
+                </p>
+
+                <button type="submit" id="checking">בדוק סטטוס</button>
+    </form>
+    
+    <div id="result-container"></div>
+
+    <script src="status.js"></script>
+</body>
+</html>

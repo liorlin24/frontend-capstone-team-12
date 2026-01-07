@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בירור סטטוס פנייה</title>
+            <link rel="stylesheet" href="stylesheet.css">
+    <style> 
+        
+    </style>
+</head>
+<body>
+    <h1>בדיקת סטטוס פנייה</h1>
+    <p>הזן את מספר הפנייה על מנת לראות את מצבה</p>
+    <aside class="side-menu">
+        אפשרויות <br />נוספות
+        <nav class="menu-drop">
+          <a href="" class="side-button"
+            ><img
+              src="icons\house-building.png"
+              alt=""
+              class="option-icon"
+            />לאתר העירייה
+          </a>
+
+          <a href="" class="side-button">
+            <img src="icons\circle-phone-flip.png" alt="" class="option-icon" />
+            חיוג מהיר
+          </a>
+
+          <a href="" class="side-button">
+            <img
+              src="icons\envelope.png"
+              alt="contect-us"
+              class="option-icon"
+            />
+            צרו קשר
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\shekel-sign.png"
+              alt="payment-page"
+              class="option-icon"
+            />
+            לאתר התשלומים
+          </a>
+          <a href="" class="side-button">
+            <img src="icons\delivery-man.png" alt="order" class="option-icon" />
+            הזמנת שייקבב
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\artificial-intelligence.png"
+              alt="Ai-chat"
+              class="option-icon"
+            />
+            שיחה עם הנציג האינטרנטי
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\instagram-circle.png"
+              alt="social-media"
+              class="option-icon"
+            />
+            עקבו אחרינו ברשתות החברתיות
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\triangle-warning.png"
+              alt="emergency"
+              class="option-icon"
+            />
+            הירשמו לעדכוני החירום
+          </a>
+        </nav>
+      </aside>
+
+    <form action="#" method="get" name="check" id="check-status-form">
+                <h2></h2><strong>איתור פנייה</strong></h2>
+                
+                <p>
+                    <label for="ticket-number">מספר פנייה</label><br>
+                    <input type="text" id="ticket-number" name="ticket-id" placeholder="לדוגמה: #123456" required>
+                </p>
+
+                <button type="submit" id="checking">בדוק סטטוס</button>
+    </form>
+    
+    <div id="result-container"></div>
+
+    <script src="status.js"></script>
+    <a href="index.html" class="back-homepage" >
+          בחזרה לדף הבית
+        </a>
+
+</body>
+</html>

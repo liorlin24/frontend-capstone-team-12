@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פתיחת תקלה</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    <style> 
+        
+    </style>
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+     <header class = "header">
+        <img id="header-logo" src="Yahood.jpg" alt ="logo">
+     </header>
+     <div class="layout">
+      <aside class="side-menu">
+        אפשרויות נוספות
+        <nav class="menu-drop">
+          <a href="" class="side-button"
+            ><img
+              src="icons\house-building.png"
+              alt=""
+              class="option-icon"
+            />לאתר העירייה
+          </a>
+
+          <a href="" class="side-button">
+            <img src="icons\circle-phone-flip.png" alt="" class="option-icon" />
+            חיוג מהיר
+          </a>
+
+          <a href="" class="side-button">
+            <img
+              src="icons\envelope.png"
+              alt="contect-us"
+              class="option-icon"
+            />
+            צרו קשר
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\shekel-sign.png"
+              alt="payment-page"
+              class="option-icon"
+            />
+            לאתר התשלומים
+          </a>
+          <a href="" class="side-button">
+            <img src="icons\delivery-man.png" alt="order" class="option-icon" />
+            הזמנת שייקבב
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\artificial-intelligence.png"
+              alt="Ai-chat"
+              class="option-icon"
+            />
+            שיחה עם הנציג האינטרנטי
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\instagram-circle.png"
+              alt="social-media"
+              class="option-icon"
+            />
+            עקבו אחרינו ברשתות החברתיות
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\triangle-warning.png"
+              alt="emergency"
+              class="option-icon"
+            />
+            הירשמו לעדכוני החירום
+          </a>
+        </nav>
+      </aside>
+        <div id="open">
+        <h1 >פתיחת תקלה</h1>
+        <div>
+            <h2>צרו קשר עם עיריית יהוד</h2>
+            <p>
+            <ol>
+            <li>רשמו את הפרטים האישיים שלכם</li>
+            <li>בחרו את נושא המפגע וציינו לאיזו קטגוריה הוא שייך</li>
+            <li>מלאו את כתובת המפגע</li>
+            </ol>
+            </p>
+        </div>
+        <div>
+            לאחר שליחת הפנייה תקבלו מספר פנייה בSMS, בו תוכלו לעקוב על סטטוס הפנייה
+        </div>
+<form action="#" method="post" enctype="multipart/form-data" name="form" id="form">
+
+            <h3><strong>פרטים אישיים</strong></h3>
+                <p>
+                    <label for="name">שם מלא</label><br>
+                    <input type="text" id="name" name="name" placeholder="שם מלא" required>
+                </p>
+                <p>
+                    <label for="phone">מספר טלפון</label><br>
+                    <input type="tel" name="phone" id="phone" required placeholder="05*-*******">
+                </p>
+                    <p>
+                        <label for="email">דוא"ל</label><br>
+                        <input type="email" name="email" id="email" required placeholder="you@example.com">
+                    </p>
+                <h3><strong>נושא הפנייה</strong></h3>
+                <p>
+                    <label for="category">קטגוריה</label><br>
+                    <select name="category" id="category" required>
+                        <option value="" selected disabled>בחירת קטגוריה</option>
+                        <option>פינוי אשפה</option>
+                        <option>תאורת רחוב</option>
+                        <option>מכרסמים ומזיקים בשטח ציבורי</option>
+                        <option>מים</option>
+                        <option>רמזורים</option>
+                        <option>שילוט/תמרור</option>
+                        <option>ניקיון</option>
+                        <option>גינון וצמחייה</option>
+                        <option>מדרכות וכבישים</option>
+                        <option>ניקוזים וביובים</option>
+                        <option>רעש</option>
+                        <option>בעלי חיים</option>
+                        <option>חניה</option>
+                        <option>פיקוח עירוני</option>
+                        <option>ריהוט רחוב</option>
+                        <option>אחר</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="description">תיאור תקלה</label><br>
+                    <input type="text" id="description" name="description" placeholder="תיאור התקלה..." required>
+                </p>
+                <p>
+                    <label for="file-upload">צירוף תמונה (אופציונלי)</label><br>
+                    <input type="file" id="file-upload" name="file-upload" accept="image/*">
+                </p>
+                <h3><strong>מיקום התקלה</strong></h3>
+                <p>
+                    <label for="street">מיקום התקלה</label><br>
+                    <input type="text" id="street" name="street" placeholder="רחוב" required>
+                    <input type="text" id="house-number" name="house-number" placeholder="מספר בית" required>
+                </p>
+                <div class="submit-wrapper">
+            <button type="submit" class="submit-btn" id="submit-btn">שליחת הפנייה</button>
+        </div>
+
+        <div id="result-container" style="display: none; margin-top: 15px; padding: 15px; border: 2px solid #4CAF50; background-color: #f9fff9; border-radius: 8px;">
+            </div>
+
+    
+        </form>
+        <a href="index.html" class="back-homepage" >
+          בחזרה לדף הבית
+        </a>
+
+        <script src="openform.js"></script>
+</body>
+</html>

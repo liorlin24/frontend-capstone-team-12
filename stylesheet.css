@@ -1,19 +1,83 @@
-.header-logo img {
-  width: 200px;
-  height: auto;
+#header-logo {
+  width: auto;
+  height: 150px;
 }
 header {
-  background-color: #8e89cb;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px;
+  justify-content: right;
+  height: 100px;
+  width: calc(100%-40px);
+}
+.side-menu {
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  width: 200px;
+  padding: 16px;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  justify-content: center;
+  font-family: "Noto Serif Hebrew", serif;
+}
+.menu-drop {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  margin-top: -5px;
+  padding: 5px;
+  font-family: sans-serif;
+}
+.side-menu:hover .menu-drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(8px);
+}
+.side-button {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  color: #070606;
+  padding: 10px 0;
+  border-radius: 20px;
+  text-decoration: solid;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-width: 14px;
+  gap: 15px;
+  font-family: "Noto Serif Hebrew", serif;
+  border-bottom: 1px solid;
+  width: calc(100% - 10px);
+  white-space: nowrap;
+  padding-right: 10px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+nav {
+  max-width: 900px;
+  border-radius: 20px;
+  direction: rtl;
+  text-align: center;
 }
 
 body {
   background-color: #8e89cb;
+  background-image: url(background-photo.png);
+  background-size: cover;
 }
+
 .container {
   max-width: 900px;
   margin: 40px auto;
@@ -24,6 +88,9 @@ body {
   text-align: right;
   display: flex;
   flex-direction: column;
+  border: 1px solid #9e9e9e;
+  box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 0.48);
+  font-family: sans-serif;
 }
 .container h1 {
   text-align: center;
@@ -42,6 +109,8 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
   border-width: 24px;
+  gap: 10px;
+  font-family: "Noto Serif Hebrew", serif;
 }
 .link-cube:hover {
   transform: translateY(-4px);
@@ -62,25 +131,59 @@ nav {
   text-align: center;
 }
 #form {
-  max-width: 900px;
+  max-width: 650px;
   margin: 40px auto;
-  padding: 40px;
-  background-color: aliceblue;
+  background-color: rgb(209, 231, 231);
   border-radius: 20px;
-
-  direction: rtl; /* עברית כמו שצריך */
-  text-align: right;
+  direction: rtl;
+  text-align: center;
+  border: 1px solid #9e9e9e;
+  box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 0.48);
+  font-family: sans-serif;
+  padding-bottom: 20px;
 }
 .primary-actions {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
 }
-.secondry-actions {
-  display: flex;
-  padding: 30px;
+.option-icon {
+  width: 20px;
+  height: 20px;
+}
+#open {
+  text-align: center;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  font-family: "Noto Serif Hebrew", serif;
+}
+#open ol {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: right;
+}
+.submit-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.submit-btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+.submit-btn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#name {
+  font-family: "Noto Serif Hebrew", serif;
 }

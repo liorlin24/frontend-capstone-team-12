@@ -4,10 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>פתיחת תקלה</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    <style> 
+        
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <div>
-        <h1 id="open">פתיחת תקלה</h1>
+     <header class = "header">
+        <img id="header-logo" src="Yahood.jpg" alt ="logo">
+     </header>
+     <div class="layout">
+      <aside class="side-menu">
+        אפשרויות נוספות
+        <nav class="menu-drop">
+          <a href="" class="side-button"
+            ><img
+              src="icons\house-building.png"
+              alt=""
+              class="option-icon"
+            />לאתר העירייה
+          </a>
+
+          <a href="" class="side-button">
+            <img src="icons\circle-phone-flip.png" alt="" class="option-icon" />
+            חיוג מהיר
+          </a>
+
+          <a href="" class="side-button">
+            <img
+              src="icons\envelope.png"
+              alt="contect-us"
+              class="option-icon"
+            />
+            צרו קשר
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\shekel-sign.png"
+              alt="payment-page"
+              class="option-icon"
+            />
+            לאתר התשלומים
+          </a>
+          <a href="" class="side-button">
+            <img src="icons\delivery-man.png" alt="order" class="option-icon" />
+            הזמנת שייקבב
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\artificial-intelligence.png"
+              alt="Ai-chat"
+              class="option-icon"
+            />
+            שיחה עם הנציג האינטרנטי
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\instagram-circle.png"
+              alt="social-media"
+              class="option-icon"
+            />
+            עקבו אחרינו ברשתות החברתיות
+          </a>
+          <a href="" class="side-button">
+            <img
+              src="icons\triangle-warning.png"
+              alt="emergency"
+              class="option-icon"
+            />
+            הירשמו לעדכוני החירום
+          </a>
+        </nav>
+      </aside>
+        <div id="open">
+        <h1 >פתיחת תקלה</h1>
         <div>
             <h2>צרו קשר עם עיריית יהוד</h2>
             <p>
@@ -74,8 +147,17 @@
                     <input type="text" id="house-number" name="house-number" placeholder="מספר בית" required>
                 </p>
                 <div class="submit-wrapper">
-            <button type="submit" class="submit-btn">שליחת הפנייה </button>
+            <button type="submit" class="submit-btn" id="submit-btn">שליחת הפנייה</button>
+        </div>
+
+        <div id="result-container" style="display: none; margin-top: 15px; padding: 15px; border: 2px solid #4CAF50; background-color: #f9fff9; border-radius: 8px;">
             </div>
+
+    </form>
+
+    </form>
         </form>
+
+        <script src="openform.js"></script>
 </body>
 </html>

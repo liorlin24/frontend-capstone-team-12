@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,53 +9,45 @@
   </head>
   <body>
     <header class="header">
-      <nav class="menu-drop">
-        <a href="" class="side-button"
-          ><img src="icons/house-building.png" alt="" class="option-icon" />לאתר
+      <nav class="menu-drop" id="hamburger">
+        <div class="side-button menu-btn">
+          <img
+            src="./icons/layout.png"
+            alt="option-list"
+            class="option-icon"
+          />אפשרויות נוספות
+        </div>
+        <script src="index.js"></script>
+        <a href="./notfound.html" class="side-button"
+          ><img src="icons\house-building.png" alt="" class="option-icon" />לאתר
           העירייה
         </a>
 
-        <a href="" class="side-button">
-          <img src="icons/circle-phone-flip.png" alt="" class="option-icon" />
+        <a href="./notfound.html" class="side-button">
+          <img src="icons\circle-phone-flip.png" alt="" class="option-icon" />
           חיוג מהיר
         </a>
 
-        <a href="" class="side-button">
-          <img src="icons/envelope.png" alt="contect-us" class="option-icon" />
+        <a href="./notfound.html" class="side-button">
+          <img src="icons\envelope.png" alt="contect-us" class="option-icon" />
           צרו קשר
         </a>
-        <a href="" class="side-button">
+        <a href="./notfound.html" class="side-button">
           <img
-            src="icons/shekel-sign.png"
+            src="icons\shekel-sign.png"
             alt="payment-page"
             class="option-icon"
           />
           לאתר התשלומים
         </a>
-        <a href="" class="side-button">
+        <a href="./notfound.html" class="side-button">
           <img
-            src="icons/artificial-intelligence.png"
+            src="icons\artificial-intelligence.png"
             alt="Ai-chat"
             class="option-icon"
           />
-          <b> שיחה עם נציג אינטרנטי </b>
+          שיחה עם נציג אינטרנטי
         </a>
-        <!-- <a href="" class="side-button">
-          <img
-            src="icons\instagram-circle.png"
-            alt="social-media"
-            class="option-icon"
-          />
-          עקבו אחרינו ברשתות החברתיות
-        </a> -->
-        <!-- <a href="" class="side-button">
-          <img
-            src="icons\triangle-warning.png"
-            alt="emergency"
-            class="option-icon"
-          />
-          הירשמו לעדכוני החירום
-        </a> -->
       </nav>
       <img id="header-logo" src="./photos/logo.png" alt="logo" />
     </header>
@@ -73,7 +65,7 @@
         />
       </div>
 
-      <button type="submit" class="submit-btn" id="checking">בדוק סטטוס</button>
+      <button type="submit" class="status-btn" id="checking">בדוק סטטוס</button>
     </form>
 
     <div id="result-container"></div>

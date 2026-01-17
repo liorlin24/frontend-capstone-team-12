@@ -14,23 +14,31 @@
     />
   </head>
   <body>
-    <header class="header">
-      <nav class="menu-drop">
-        <a href="" class="side-button"
+     <header class="header">
+      <nav class="menu-drop" id="hamburger">
+        <div class="side-button menu-btn">
+          <img
+            src="./icons/layout.png"
+            alt="option-list"
+            class="option-icon"
+          />אפשרויות נוספות
+        </div>
+        <script src="index.js"></script>
+        <a href="./notfound.html" class="side-button"
           ><img src="icons\house-building.png" alt="" class="option-icon" />לאתר
           העירייה
         </a>
 
-        <a href="" class="side-button">
+        <a href="./notfound.html" class="side-button">
           <img src="icons\circle-phone-flip.png" alt="" class="option-icon" />
           חיוג מהיר
         </a>
 
-        <a href="" class="side-button">
+        <a href="./notfound.html" class="side-button">
           <img src="icons\envelope.png" alt="contect-us" class="option-icon" />
           צרו קשר
         </a>
-        <a href="" class="side-button">
+        <a href="./notfound.html" class="side-button">
           <img
             src="icons\shekel-sign.png"
             alt="payment-page"
@@ -38,30 +46,14 @@
           />
           לאתר התשלומים
         </a>
-        <a href="" class="side-button">
+        <a href="./notfound.html" class="side-button">
           <img
             src="icons\artificial-intelligence.png"
             alt="Ai-chat"
             class="option-icon"
           />
-          <b> שיחה עם נציג אינטרנטי </b>
+          שיחה עם נציג אינטרנטי
         </a>
-        <!-- <a href="" class="side-button">
-          <img
-            src="icons\instagram-circle.png"
-            alt="social-media"
-            class="option-icon"
-          />
-          עקבו אחרינו ברשתות החברתיות
-        </a> -->
-        <!-- <a href="" class="side-button">
-          <img
-            src="icons\triangle-warning.png"
-            alt="emergency"
-            class="option-icon"
-          />
-          הירשמו לעדכוני החירום
-        </a> -->
       </nav>
       <img id="header-logo" src="./photos/logo.png" alt="logo" />
     </header>
@@ -79,7 +71,7 @@
         <br />
       </div>
       <div>
-        לאחר שליחת הפנייה תקבלו מספר פנייה בSMS, בו תוכלו לעקוב על סטטוס הפנייה
+        לאחר שליחת הטופס תקבלו מספר פנייה,שמרו אותו כדי לבדוק את סטטוס הפנייה
       </div>
     </div>
     <div>
@@ -90,9 +82,9 @@
         name="form"
         id="form"
       >
-        <h3><strong>פרטים אישיים</strong></h3>
         <div class="form-group">
-          <label for="name">שם מלא</label><br />
+          <label for="name">שם מלא <span style="color: red">*</span></label
+          ><br />
           <input
             type="text"
             id="full_name"
@@ -102,7 +94,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="phone">מספר טלפון</label><br />
+          <label for="phone">מספר טלפון<span style="color: red">*</label><br />
           <input
             type="tel"
             name="phone"
@@ -112,7 +104,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="email">דוא"ל</label><br />
+          <label for="email">דוא"ל<span style="color: red">*</label><br />
           <input
             type="email"
             name="email"
@@ -122,10 +114,10 @@
           />
         </div>
         <div class="form-group">
-          <label for="category">נושא הפנייה</label><br />
+          <label for="category">נושא הפנייה<span style="color: red">*</label><br />
           <select name="category" id="category" required>
             <option value="" selected disabled>בחירת קטגוריה</option>
-            <option><b> פינוי אשפה </b></option>
+            <option> פינוי אשפה</option>
             <option>תאורת רחוב</option>
             <option>מכרסמים ומזיקים בשטח ציבורי</option>
             <option>מים</option>
@@ -143,8 +135,9 @@
             <option>אחר</option>
           </select>
         </div>
+
         <div class="form-group">
-          <label for="description">תיאור תקלה</label><br />
+          <label for="description">תיאור תקלה<span style="color: red">*</label><br />
           <input
             type="text"
             id="description"
@@ -155,7 +148,7 @@
         </div>
         <div class="form-group">
           <label for="file-upload" class="file-label"
-            >צירוף תמונה (אופציונלי)</label
+            >צירוף תמונה</label
           >
 
           <input
@@ -165,23 +158,7 @@
             accept="image/*"
           />
         </div>
-        <div class="form-group">
-          <label for="street">מיקום התקלה</label>
-          <input
-            type="text"
-            id="street"
-            name="street"
-            placeholder="רחוב"
-            required
-          />
-          <input
-            type="text"
-            id="house-number"
-            name="house-number"
-            placeholder="מספר בית"
-            required
-          />
-        </div>
+
         <div class="form-check">
           <label for="alerts"
             >אני מסכים\ה לקבל עדכונים במסרון על מצב הפנייה שלי</label

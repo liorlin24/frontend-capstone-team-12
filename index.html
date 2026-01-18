@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
+    <title>דף הבית</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <style></style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,15 @@
   </head>
   <body>
     <header class="header">
-      <nav class="menu-drop">
+      <nav class="menu-drop" id="hamburger">
+        <div class="side-button menu-btn">
+          <img
+            src="./icons/layout.png"
+            alt="option-list"
+            class="option-icon"
+          />אפשרויות נוספות
+        </div>
+        <script src="index.js"></script>
         <a href="./notfound.html" class="side-button"
           ><img src="icons\house-building.png" alt="" class="option-icon" />לאתר
           העירייה
@@ -44,63 +52,45 @@
             alt="Ai-chat"
             class="option-icon"
           />
-          <b> שיחה עם נציג אינטרנטי </b>
+          שיחה עם נציג אינטרנטי
         </a>
-        <!-- <a href="" class="side-button">
-          <img
-            src="icons\instagram-circle.png"
-            alt="social-media"
-            class="option-icon"
-          />
-          עקבו אחרינו ברשתות החברתיות
-        </a> -->
-        <!-- <a href="" class="side-button">
-          <img
-            src="icons\triangle-warning.png"
-            alt="emergency"
-            class="option-icon"
-          />
-          הירשמו לעדכוני החירום
-        </a> -->
       </nav>
       <img id="header-logo" src="./photos/logo.png" alt="logo" />
     </header>
-    <div class="layout">
-      <!-- <aside class="side-menu">
-        אפשרויות <br />נוספות
+    <main>
+      <div class="layout">
+        <div class="container">
+          <div>
+            <h1>מוקד תקלות עירוני של מעלה אלונים</h1>
+            <h2>אני רוצה:</h2>
+          </div>
 
-      </aside> -->
-      <div class="container">
-        <div>
-          <h1>מוקד תקלות עירוני של מעלה אלונים</h1>
-          <h2>אני רוצה:</h2>
-        </div>
+          <div class="primary-actions">
+            <a href="Open.html" class="link-cube">
+              <img
+                src="icons\lightbulb-exclamation.png"
+                alt=""
+                class="option-icon"
+              />
+              פתיחת תקלה מקוונת</a
+            >
+            <a href="List_page.html" class="link-cube"
+              ><img src="icons\list.png" alt="list" class="option-icon" />רשימת
+              תקלות
+            </a>
 
-        <div class="primary-actions">
-          <a href="Open.html" class="link-cube">
-            <img
-              src="icons\lightbulb-exclamation.png"
-              alt=""
-              class="option-icon"
-            />
-            פתיחת תקלה מקוונת</a
-          >
-          <a href="List_page.html" class="link-cube"
-            ><img src="icons\list.png" alt="list" class="option-icon" />רשימת
-            תקלות
-          </a>
-
-          <a href="Status.html" class="link-cube">
-            <img
-              src="icons\calendar-exclamation.png"
-              alt=""
-              class="option-icon"
-            />
-            בירור סטטוס פנייה</a
-          >
+            <a href="Status.html" class="link-cube">
+              <img
+                src="icons\calendar-exclamation.png"
+                alt=""
+                class="option-icon"
+              />
+              בירור סטטוס פנייה</a
+            >
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer>
       <a href="" class="foot-buttom">
         <img

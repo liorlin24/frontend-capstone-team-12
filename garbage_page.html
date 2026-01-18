@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="garbage_page.css" />
+</head>
+
+<body>
+    <header>
+        <h1>פינוי אשפה,גזם וגרוטאות</h1>
+    </header>
+    <main>
+        <div class="info-p">
+            <h1>פינוי אשפה,גזם וגרוטאות</h1>
+            <p>עריית יהוד שמה דגש רב על שיפור איכות חיי התושבים.
+                ניתנת תשומת לב מיוחדת לניקיון וטיפוח חזות העיר.
+                לשם כך, מבצעת מחלקת הניקיון פעילות אינטנסיבית של איסוף גזם וגרוטאות הן למען תושבי העיר והן למען המבקרים
+                בה.
+                האיסוף מתבצע בהתאם ללו"ז מסודר, ובנוסף לפי דחיפות הפינוי(לדוגמא אשפה שחוסמת את הכביש).
+            </p>
+            <ul>
+                <li>השירות לא ניתן בימי שבת.</li>
+                <li>ככלל עדיף לבצע פינוי פסולת בימים המוגדרים,ניתן לברר מתי מתבצע פינוי פסולת בשכונתכם בחלונית השכונה
+                    שלי.
+                </li>
+                <li>מה לא נכלל בפינוי העירוני?</li>
+                <li> פינוי פסולת בניין ותכולת שיפוץ (לרבות ארונות עץ, פלטות זכוכית ומראות) וכן תכולת דירה היא באחריות
+                    המשפץ
+                    או מפנה
+                    הדירה בלבד ואינה נכללת בתיאום פינוי פסולת על ידי העירייה.
+                </li>
+                <li>הוצאת גזם, ריהוט, גרוטאות, שייק קבב ופסולת חריגה שלא ביום ההוצאה, יביאו לקנסות בגובה ₪475 .</li>
+            </ul>
+        </div>
+        <div>
+            <h2> איתור ימי פינוי, ניקיון והוצאת פסולת לפי שכונות</h2>
+            <p><label for="neighborhood_select">בחר שכונה</label><br>
+                <select id="neighborhood_select">
+                    <option value="" selected disabled>בחירת שכונה</option>
+                    <option value="efal">רמת אפעל</option>
+                    <option value="ramot_remez">רמות רמז</option>
+                    <option value="givat_alonim">גבעת אלונים</option>
+                    <option value="amidar">רמת עמידר</option>
+                    <option value="marom_neve">מרום נווה </option>
+                </select>
+            </p>
+            <p>
+                <label for="garbage_type"> בחר סוג אשפה</label><br>
+                <select id="garbage_type">
+                    <option value="" selected disabled>בחירת סוג אשפה</option>
+                    <option value="trash">פינוי פחי אשפה</option>
+                    <option value="garden">פינוי גזם</option>
+                    <option value="buried">פינוי פסולת מוטמנת</option>
+                    <option value="kebab">פינוי שייק קבב</option>
+                </select>
+            </p>
+            <div>
+                <button type="button" onclick="toggletable()" class="search-btn">חפש ימי פינוי</button>
+            </div>
+
+
+        </div>
+        <div>
+            <div id="trash_bin_table" class="trash_waste_schedule" style="display:none;">
+                <h3>פינוי פחי אשפה</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>שכונה / יום</th>
+                            <th>ראשון</th>
+                            <th>שני</th>
+                            <th>שלישי</th>
+                            <th>רביעי</th>
+                            <th>חמישי</th>
+                            <th>שישי</th>
+                            <th>שבת</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-efal">
+                            <td>רמת אפעל</td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-ramot_remez">
+                            <td>רמות רמז</td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-givat_alonim">
+                            <td>גבעת אלונים</td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-amidar">
+                            <td>רמת עמידר</td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-marom_neve">
+                            <td>מרום נווה</td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="garden_table" class="trash_waste_schedule" style="display:none;">
+                <h3>פינוי גזם</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>שכונה / יום</th>
+                            <th>ראשון</th>
+                            <th>שני</th>
+                            <th>שלישי</th>
+                            <th>רביעי</th>
+                            <th>חמישי</th>
+                            <th>שישי</th>
+                            <th>שבת</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-efal">
+                            <td>רמת אפעל</td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-ramot_remez">
+                            <td>רמות רמז</td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-givat_alonim">
+                            <td>גבעת אלונים</td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-amidar">
+                            <td>רמת עמידר</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-marom_neve">
+                            <td>מרום נווה</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="hidden_garbage_table" class="trash_waste_schedule" style="display:none;">
+                <h3>פינוי פסולת מוטמנת</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>שכונה / יום</th>
+                            <th>ראשון</th>
+                            <th>שני</th>
+                            <th>שלישי</th>
+                            <th>רביעי</th>
+                            <th>חמישי</th>
+                            <th>שישי</th>
+                            <th>שבת</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-efal">
+                            <td>רמת אפעל</td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-ramot_remez">
+                            <td>רמות רמז</td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-givat_alonim">
+                            <td>גבעת אלונים</td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-amidar">
+                            <td>רמת עמידר</td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-marom_neve">
+                            <td>מרום נווה</td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="icons/check.png" alt="רשימת הזבל" class="option-icon"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="trash_options">
+            <p>
+            <h1>דיווח על פסולת חריגה</h1>
+            </p>
+            <div class="unique_trash_list">
+                <h3>במקרה של פסולת חריגה ניתן לדווח למוקד הערייה בלינק המצורף. משך הטיפול בפנייה לוקח עד 24 שעות, למעט
+                    שבתות
+                    וחגים.</h3>
+                <h3>דוגמאות לפסולת חריגה</h3>
+                <ul>
+                    <li class="option_garbege">אי פינוי אשפה</li>
+                    <li class="option_garbege">אשפה שחוסמת את המעבר</li>
+                    <li class="option_garbege">אשפה מסוכנת</li>
+                    <li class="option_garbege">פינוי גרוטאות</li>
+                </ul>
+                <div>
+                    <a href="Open.html" class="link-cube">
+                        לדיווח על תקלה
+                    </a>
+                </div>
+
+            </div>
+            <a href="index.html" class="back-homepage">
+                בחזרה לדף הבית
+            </a>
+        </div>
+        <div id="kebab_modal" class="modal_overlay">
+            <div class="modal_content">
+                <span class="close_btn" onclick="closekebabModal()">&times;</span>
+
+                <p id="ashkenazi_msg" class="kebab_alert"></p>
+                <img src="icons/ks.png" alt="ks" class="ks_image">
+
+                <div id="kebab_recipe_card" class="recipe_takeover">
+                    <h3 class="recipe_title">מתכון לשייק קבב (אוריגינל)</h3>
+                    <img src="icons/shake_kebab.png" alt="שייק קבב" class="modal_image">
+                    <ul class="recipe_list">
+                        <li>שלושה קבבים</li>
+                        <li>כף טחינה גולמית</li>
+                        <li>פיתה טרייה</li>
+                        <li>כוס מים/עמבה לפי המרקם הרצוי</li>
+                        <li>מלח לפי העין</li>
+                        <li>כעשר קוביות קרח למנת הגשה</li>
+                        <li>חצי לימון</li>
+                        <li>שן שום טרייה</li>
+                    </ul>
+
+                    <ol class="recipe_instructions">
+                        <li>צולים 3 קבבים איכותיים.</li>
+                        <li>בזמן שהקבבים מתבשלים נוסיף לטחינה הגולמית לימון, מלח, שום ומים עד שנוצר מרקם נוזלי אך לא
+                            נוזלי מדי.</li>
+                        <li>ניקח את הפיתה וניצור בה פתח בעזרת סכין חדה.</li>
+                        <li>נמרח כמות נדיבה של טחינה בתוך הפיתה, ונוסיף את הקבבים ישר מהאש (ניתן להוסיף ירקות למי
+                            שאוהב).</li>
+                        <li>את הפיתה המוכנה נזרוק לבלנדר ביחד עם קוביות הקרח.</li>
+                        <li>מוזגים את כל המרכיבים לבלנדר וטוחנים עד לקבלת נוזל אחיד ומעורר תיאבון.</li>
+                        <li>נמזוג את התערובת לכוס גדולה, למיטיבי לכת ניתן לזלף קצת עמבה מעל.</li>
+                        <li>וזהו! יש לכם שייק קבב מרענן מוכן לחודשי הקיץ, תהנו!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <script src="garbage_page.js"></script>
+    </main>
+</body>
+
+</html>
+
+

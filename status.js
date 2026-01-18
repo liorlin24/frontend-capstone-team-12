@@ -29,13 +29,15 @@ document
 
       // בניית ה-HTML של התוצאה
       resultDiv.innerHTML = `
-            <h3 style="color: #4CAF50; margin-top:0;">נמצאה פנייה!</h3>
+      <div class = "result-container">
+            <h3>נמצאה פנייה!</h3>
             <p><strong>שם איש קשר:</strong> ${data.full_name}</p>
             <p><strong>מספר טלפון:</strong> ${data.phone_num}</p>
             <p><strong>מספר פנייה:</strong> ${data.formattedId}</p>
             <p><strong>תאריך פתיחה:</strong> ${data.date}</p>
-            <p><strong>קטגוריה:</strong> ${data.category}</p>
+            <p><strong>קטגוריה: ${data.category}</p>
             <p><strong>סטטוס נוכחי:</strong> <span style="background-color: yellow; padding: 2px 5px; border-radius: 3px;">${data.status}</span></p>
+            </div>
         `;
     } else {
       // --- מצב שגיאה: הפנייה לא נמצאה ---

@@ -396,10 +396,10 @@ form option {
   border-radius: 20px;
   direction: rtl;
   text-align: center;
-  border: 1px solid #9e9e9e;
   box-shadow: -10px 10px 15px 15px rgba(0, 0, 0, 0.48);
   padding-bottom: 20px;
   opacity: 0;
+  font-family: sans-serif;
 }
 .modal_overlay {
   display: none;

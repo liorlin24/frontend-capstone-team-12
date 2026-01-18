@@ -11,7 +11,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     id: randomNum,
     formattedId: caseNumber,
     date: new Date().toLocaleDateString("he-IL"),
-    status: "התקבל במערכת",
+    status: "בטיפול",
     category: document.getElementById("category").value,
     full_name: full_name,
     phone_num: phone_num,
@@ -23,13 +23,14 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   // מכינים את הטקסט שיופיע (אפשר להשתמש ב-HTML בתוך הגרשיים)
   resultDiv.innerHTML = `
-        <h3 style="color: #4CAF50; margin: 0;">הפנייה נשלחה בהצלחה!</h3>
+        <h3 style="color: #050505; margin: 0;">הפנייה נשלחה בהצלחה!</h3>
         <p>מספר התיק שלך למעקב: <strong>${caseNumber}</strong></p>
         <p style="font-size: 0.9em; color: gray;">( שמור את המספר הזה לבירור סטטוס הפנייה)</p>
     `;
 
   // הופכים את הקופסה לגלויה
   resultDiv.style.display = "block";
+  resultDiv.style.opacity = "1";
 
   // אופציונלי: להסתיר את כפתור השליחה כדי שלא ילחצו שוב
   document.getElementById("submit-btn").style.display = "none";

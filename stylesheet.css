@@ -77,22 +77,17 @@ nav {
   direction: rtl;
   align-items: center;
 }
-/* .side-menu:hover .menu-drop {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(8px);
-} */
+
 .side-button {
   display: flex;
-  /* background-color: rgb(255, 255, 255); */
+
   color: #070606;
   padding: 10px 0;
-  /* border-radius: 20px; */
+
   text-decoration: solid;
-  /* transition: transform 0.2s, box-shadow 0.2s; */
-  /* border-width: 14px; */
+
   gap: 15px;
-  /* border-bottom: 1px solid; */
+
   white-space: nowrap;
   padding-right: 10px;
   font-size: 18px;
@@ -480,12 +475,12 @@ form option {
 
 .kebab_image,
 .modal_image {
-  display: block; /* מבטיח שהתמונה תרד שורה ותהיה לבד */
-  margin: 20px auto; /* מרכוז התמונה ורווח של 20 פיקסלים מעליה ומתחתיה */
-  max-width: 100%; /* מונע מהתמונה לצאת מגבולות המודל */
-  height: auto; /* שומר על פרופורציות התמונה */
-  border-radius: 15px; /* עיגול פינות בשביל היופי */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* צללית קלה שתפריד אותה מהרקע הלבן */
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .tables-container {
   max-width: 680px;
@@ -580,15 +575,37 @@ form option {
   .tables {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    width: 50%;
+    width: 100%;
+  }
+  .trash_waste_schedule table {
+    width: 100%;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+    width: 100%;
   }
 
+  .table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    white-space: normal;
+  }
+  #result-container {
+    margin-top: 30px !important;
+    width: 50% !important;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
   .form-group {
     flex-direction: column;
-    margin-right: 0;
-    margin-left: 0;
     align-items: center;
-    padding: 0 35px;
+    padding: 0px 15px;
   }
 
   .form-group label {
@@ -599,17 +616,17 @@ form option {
 
   .form-group input {
     max-width: 100%;
-    height: 50px;
+    height: 39px;
     width: 100%;
     font-size: 22px;
+    margin-top: -7px;
   }
 
   .options {
     width: 100%;
-
     grid-template-columns: 1fr 1fr;
-
     max-height: none;
+    margin-left: 45px;
   }
 
   .option_cube {
@@ -643,8 +660,62 @@ form option {
     flex-wrap: wrap;
     margin-bottom: -24px;
   }
-  .open {
+  .open-info {
+    max-width: 680px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    direction: rtl;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 0.48);
     align-items: center;
+    width: 92%;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    height: auto !important;
+  }
+  .open-info h1 {
+    margin-top: -2px;
+    margin-bottom: 33px;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+  }
+
+  .table-wrapper table,
+  .tables table,
+  .trash_waste_schedule table {
+    width: auto !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  .table-wrapper th,
+  .table-wrapper td {
+    padding: 8px 10px;
+    white-space: normal !important;
+    word-break: keep-all;
+    vertical-align: middle;
+    text-align: right;
+  }
+
+  .table-wrapper th.icon,
+  .table-wrapper td.icon {
+    width: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    padding: 6px;
+  }
+  .tables {
+    width: 100% !important;
   }
 }
 

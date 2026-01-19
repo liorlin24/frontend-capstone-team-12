@@ -36,7 +36,7 @@ document
             <p><strong>מספר פנייה:</strong> ${data.formattedId}</p>
             <p><strong>תאריך פתיחה:</strong> ${data.date}</p>
             <p><strong>קטגוריה: ${data.category}</p>
-            <p><strong>סטטוס נוכחי:</strong> <span style="background-color: yellow; padding: 2px 5px; border-radius: 3px;">${data.status}</span></p>
+            <p><strong>סטטוס נוכחי:</strong> <span style = padding: 2px 5px; border-radius: 3px;">${data.status}</span></p>
             </div>
         `;
     } else {

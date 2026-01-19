@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>פתיחת תקלה</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <style></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <header class="header">
+      <nav class="menu-drop" id="hamburger">
+        <div class="side-button menu-btn">
+          <img
+            src="./icons/layout.png"
+            alt="option-list"
+            class="option-icon"
+          />אפשרויות נוספות
+        </div>
+        <script src="index.js"></script>
+        <a href="./notfound.html" class="side-button"
+          ><img src="icons\house-building.png" alt="" class="option-icon" />לאתר
+          העירייה
+        </a>
+
+        <a href="./notfound.html" class="side-button">
+          <img src="icons\circle-phone-flip.png" alt="" class="option-icon" />
+          חיוג מהיר
+        </a>
+
+        <a href="./notfound.html" class="side-button">
+          <img src="icons\envelope.png" alt="contect-us" class="option-icon" />
+          צרו קשר
+        </a>
+        <a href="./notfound.html" class="side-button">
+          <img
+            src="icons\shekel-sign.png"
+            alt="payment-page"
+            class="option-icon"
+          />
+          לאתר התשלומים
+        </a>
+        <a href="./notfound.html" class="side-button">
+          <img
+            src="icons\artificial-intelligence.png"
+            alt="Ai-chat"
+            class="option-icon"
+          />
+          שיחה עם נציג אינטרנטי
+        </a>
+      </nav>
+      <img id="header-logo" src="./photos/logo.png" alt="logo" />
+    </header>
+    <div class="open">
+      <h1>פתיחת תקלה</h1>
+      <div>
+        <img src="./icons/writing.png" alt="writing" class="option-icon" />ספרו
+        לנו קצת על עצמכם
+        <br />
+        <img src="./icons/pin.png" alt="pin" class="option-icon" />ספרו לנו מה
+        הבעיה ואיפה היא נמצאת
+        <br />
+        <img src="./icons/camera.png" alt="camera" class="option-icon" />
+        ניתן להוסיף תמונה
+        <br />
+      </div>
+      <div>
+        לאחר שליחת הטופס תקבלו מספר פנייה,שמרו אותו כדי לבדוק את סטטוס הפנייה
+      </div>
+    </div>
+    <div>
+      <form
+        action="#"
+        method="post"
+        enctype="multipart/form-data"
+        name="form"
+        id="form"
+      >
+        <div class="form-group">
+          <label for="name">שם מלא <span style="color: red">*</span></label
+          ><br />
+          <input
+            type="text"
+            id="full_name"
+            name="name"
+            placeholder="שם מלא"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">מספר טלפון<span style="color: red">*</label><br />
+          <input
+            type="tel"
+            name="phone"
+            id="phone_num"
+            required
+            placeholder="05*-*******"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">דוא"ל<span style="color: red">*</label><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="you@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">נושא הפנייה<span style="color: red">*</label><br />
+          <select name="category" id="category" required>
+            <option value="" selected disabled>בחירת קטגוריה</option>
+            <option> פינוי אשפה</option>
+            <option>תאורת רחוב</option>
+            <option>מכרסמים ומזיקים בשטח ציבורי</option>
+            <option>מים</option>
+            <option>רמזורים</option>
+            <option>שילוט/תמרור</option>
+            <option>ניקיון</option>
+            <option>גינון וצמחייה</option>
+            <option>מדרכות וכבישים</option>
+            <option>ניקוזים וביובים</option>
+            <option>רעש</option>
+            <option>בעלי חיים</option>
+            <option>חניה</option>
+            <option>פיקוח עירוני</option>
+            <option>ריהוט רחוב</option>
+            <option>אחר</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">תיאור תקלה<span style="color: red">*</label><br />
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="תיאור התקלה..."
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="file-upload" class="file-label"
+            >צירוף תמונה</label
+          >
+
+          <input
+            type="file"
+            id="file-upload"
+            name="file-upload"
+            accept="image/*"
+          />
+        </div>
+
+        <div class="form-check">
+          <label for="alerts"
+            >אני מסכים\ה לקבל עדכונים במסרון על מצב הפנייה שלי</label
+          >
+          <input type="checkbox" id="alerts" name=" alerts" />
+        </div>
+        <div class="submit-wrapper">
+          <button type="submit" class="submit-btn" id="submit-btn">
+            שליחת הפנייה
+          </button>
+        </div>
+
+        <div
+          id="result-container"
+          style="
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border: 2px solid #4caf50;
+            background-color: #f9fff9;
+            border-radius: 8px;
+          "
+        ></div>
+      </form>
+    </div>
+    <a href="index.html" class="back-homepage"> בחזרה לדף הבית </a>
+
+    <script src="openform.js"></script>
+    <footer>
+      <a href="" class="foot-buttom">
+        <img
+          src="icons\triangle-warning.png"
+          alt="emergency"
+          class="option-icon"
+        />
+        הירשמו לעדכוני החירום
+      </a>
+      <a href="" class="foot-buttom">
+        <img
+          src="icons\instagram-circle.png"
+          alt="social-media"
+          class="option-icon"
+        />
+        עקבו אחרינו ברשתות החברתיות
+      </a>
+    </footer>
+  </body>
+</html>

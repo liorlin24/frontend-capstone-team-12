@@ -33,9 +33,9 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
 
   resultDiv.style.display = "block";
+   resultDiv.style.opacity = "1";
 
   document.getElementById("submit-btn").style.display = "none";
-  resultDiv.style.opacity = "1";
 
   e.target.reset();
 });

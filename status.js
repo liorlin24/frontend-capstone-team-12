@@ -21,6 +21,7 @@ document.getElementById('check-status-form').addEventListener('submit', function
 
         resultDiv.innerHTML = `
             <h3 style="color: #4CAF50; margin-top:0;">נמצאה פנייה!</h3>
+            <p><strong>שם איש קשר:</strong> ${data.full_name}</p>
             <p><strong>מספר פנייה:</strong> ${data.formattedId}</p>
             <p><strong>תאריך פתיחה:</strong> ${data.date}</p>
             <p><strong>כתובת:</strong> ${data.address} ${data.house}</p>

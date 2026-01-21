@@ -12,7 +12,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     id: randomNum,
     formattedId: caseNumber,
     date: new Date().toLocaleDateString("he-IL"),
-    status: "בטיפול",
+    status: "התקבל במערכת",
     category: document.getElementById("category").value,
     full_name: full_name,
     phone_num: phone_num,
@@ -26,14 +26,13 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
 
   resultDiv.innerHTML = `
-        <h3 style="color: #050505; margin: 0;">הפנייה נשלחה בהצלחה!</h3>
+        <h3 style="color: #4CAF50; margin: 0;">הפנייה נשלחה בהצלחה!</h3>
         <p>מספר התיק שלך למעקב: <strong>${caseNumber}</strong></p>
         <p style="font-size: 0.9em; color: gray;">( שמור את המספר הזה לבירור סטטוס הפנייה)</p>
     `;
 
 
   resultDiv.style.display = "block";
-  resultDiv.style.opacity = "1";
 
   document.getElementById("submit-btn").style.display = "none";
 

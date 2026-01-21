@@ -64,7 +64,7 @@
                 האיסוף מתבצע בהתאם ללו"ז מסודר, ובנוסף לפי דחיפות הפינוי(לדוגמא אשפה שחוסמת את הכביש).
             </p>
             <ul>
-                <li>השירות לא ניתן בימי ש.</li>
+                <li>השירות לא ניתן בימי שבת.</li>
                 <li>ככלל עדיף לבצע פינוי פסולת בימים המוגדרים,ניתן לברר מתי מתבצע פינוי פסולת בשכונתכם בחלונית השכונה
                     שלי.
                 </li>
@@ -79,7 +79,7 @@
         </div>
         <div class="tables-container">
             <h2> איתור ימי פינוי, ניקיון והוצאת פסולת לפי שכונות</h2>
-            <p><label for="neighborhood_select">בחר שכונה</label>
+            <p><label for="neighborhood_select">בחר שכונה</label><br>
                 <select id="neighborhood_select">
                     <option value="" selected disabled>בחירת שכונה</option>
                     <option value="efal">רמת אפעל</option>
@@ -173,7 +173,7 @@
                     </tbody>
                 </table>
             </div>
-            </div>
+            </diksv>
             <div id="garden_table" class="trash_waste_schedule" style="display:none;">
                 <h3>פינוי גזם</h3>
                 <table>
@@ -337,11 +337,16 @@
                     </a>
                 </div>
         </div>
+        <div id="kebab_modal" class="modal_overlay">
+            <div class="modal_content">
+                <span class="close_btn" onclick="closekebabModal()">&times;</span>
+            </div>
+        </div>
          <a href="index.html" class="back-homepage">
                 בחזרה לדף הבית
             </a>
-      <footer>
-      <a href="notfound.html" class="foot-buttom">
+             <footer>
+      <a href="" class="foot-buttom">
         <img
           src="icons\triangle-warning.png"
           alt="emergency"
@@ -349,7 +354,7 @@
         />
         הירשמו לעדכוני החירום
       </a>
-      <a href="notfound.html" class="foot-buttom">
+      <a href="" class="foot-buttom">
         <img
           src="icons\instagram-circle.png"
           alt="social-media"
@@ -363,3 +368,5 @@
 </body>
 
 </html>
+
+

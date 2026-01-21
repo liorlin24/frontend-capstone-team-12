@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>בירור סטטוס פנייה</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <style></style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="menu-drop" id="hamburger">
+        <div class="side-button menu-btn">
+          <img
+            src="./icons/layout.png"
+            alt="option-list"
+            class="option-icon"
+          />אפשרויות נוספות
+        </div>
+        <script src="index.js"></script>
+        <a href="./notfound.html" class="side-button"
+          ><img src="icons\house-building.png" alt="" class="option-icon" />לאתר
+          העירייה
+        </a>
+
+        <a href="./notfound.html" class="side-button">
+          <img src="icons\circle-phone-flip.png" alt="" class="option-icon" />
+          חיוג מהיר
+        </a>
+
+        <a href="./notfound.html" class="side-button">
+          <img src="icons\envelope.png" alt="contect-us" class="option-icon" />
+          צרו קשר
+        </a>
+        <a href="./notfound.html" class="side-button">
+          <img
+            src="icons\shekel-sign.png"
+            alt="payment-page"
+            class="option-icon"
+          />
+          לאתר התשלומים
+        </a>
+        <a href="./notfound.html" class="side-button">
+          <img
+            src="icons\artificial-intelligence.png"
+            alt="Ai-chat"
+            class="option-icon"
+          />
+          שיחה עם נציג אינטרנטי
+        </a>
+      </nav>
+      <img id="header-logo" src="./photos/logo.png" alt="logo" />
+    </header>
+    <form action="#" method="get" name="check" id="check-status-form">
+      <h2><strong>איתור פנייה</strong></h2>
+
+      <div class="form-group">
+        <label for="ticket-number">מספר פנייה</label><br />
+        <input
+          type="text"
+          id="ticket-number"
+          name="ticket-id"
+          placeholder="לדוגמה: #123456"
+          required
+        />
+      </div>
+
+      <button type="submit" class="status-btn" id="checking">בדוק סטטוס</button>
+    </form>
+
+    <div id="result-container"></div>
+
+    <script src="status.js"></script>
+    <a href="index.html" class="back-homepage"> בחזרה לדף הבית </a>
+    <footer>
+      <a href="" class="foot-buttom">
+        <img
+          src="icons\triangle-warning.png"
+          alt="emergency"
+          class="option-icon"
+        />
+        הירשמו לעדכוני החירום
+      </a>
+      <a href="" class="foot-buttom">
+        <img
+          src="icons\instagram-circle.png"
+          alt="social-media"
+          class="option-icon"
+        />
+        עקבו אחרינו ברשתות החברתיות
+      </a>
+    </footer>
+  </body>
+</html>

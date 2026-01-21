@@ -1,12 +1,13 @@
 document.getElementById("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // מונע רענון
+  e.preventDefault(); 
 
-  // 1. יצירת המספר
   const randomNum = Math.floor(100000 + Math.random() * 900000);
   const caseNumber = "#" + randomNum;
   const full_name = document.getElementById("full_name").value;
   const phone_num = document.getElementById("phone_num").value;
-  // 2. שמירה לזיכרון (אותו דבר כמו קודם)
+  const address = document.getElementById("street").value;
+  const house = document.getElementById("house-number").value;
+
   const caseData = {
     id: randomNum,
     formattedId: caseNumber,
@@ -15,25 +16,25 @@ document.getElementById("form").addEventListener("submit", function (e) {
     category: document.getElementById("category").value,
     full_name: full_name,
     phone_num: phone_num,
+    address: address,
+    house : house,
   };
   localStorage.setItem(randomNum, JSON.stringify(caseData));
 
-  // 3. הצגת ההודעה בדף עצמו (במקום Alert)
+
   const resultDiv = document.getElementById("result-container");
 
-  // מכינים את הטקסט שיופיע (אפשר להשתמש ב-HTML בתוך הגרשיים)
+
   resultDiv.innerHTML = `
         <h3 style="color: #4CAF50; margin: 0;">הפנייה נשלחה בהצלחה!</h3>
         <p>מספר התיק שלך למעקב: <strong>${caseNumber}</strong></p>
         <p style="font-size: 0.9em; color: gray;">( שמור את המספר הזה לבירור סטטוס הפנייה)</p>
     `;
 
-  // הופכים את הקופסה לגלויה
+
   resultDiv.style.display = "block";
 
-  // אופציונלי: להסתיר את כפתור השליחה כדי שלא ילחצו שוב
   document.getElementById("submit-btn").style.display = "none";
 
-  // ניקוי הטופס
   e.target.reset();
 });

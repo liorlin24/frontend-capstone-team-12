@@ -29,27 +29,11 @@ header {
   align-items: center;
 }
 
-/* .side-menu {
-  position: absolute;
-  top: 150px;
-  right: 20px;
-  width: 200px;
-  padding: 16px;
-  background: white;
-  border-radius: 20px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row-reverse;
-  text-align: center;
-  justify-content: center;
-} */
 .menu-drop {
   top: 0;
   right: 0;
   border-radius: 12px;
-  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); */
-  /* transform: translateY(-10px); */
-  /* transition: all 0.2s ease; */
+
   display: flex;
   gap: 5px;
   margin: 0;
@@ -151,12 +135,10 @@ footer {
   display: flex;
   padding: 10px 0;
   color: #fff;
-  /* border-radius: 20px; */
   text-decoration: solid;
-  /* transition: transform 0.2s, box-shadow 0.2s; */
-  /* border-width: 14px; */
+
   gap: 5px;
-  /* border-bottom: 1px solid; */
+
   width: auto;
   white-space: nowrap;
   font-size: 18px;
@@ -329,7 +311,6 @@ form option {
 
 .primary_container {
   max-width: 900px;
-  /* margin: 40px auto; */
   padding: 40px;
   background-color: aliceblue;
   border-radius: 20px;
@@ -473,15 +454,6 @@ form option {
   transition: background-color 0.5s ease;
 }
 
-.kebab_image,
-.modal_image {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
 .tables-container {
   max-width: 680px;
   margin: 40px auto;

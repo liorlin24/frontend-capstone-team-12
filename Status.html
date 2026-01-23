@@ -3,15 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>דף הבית</title>
+    <title>בירור סטטוס פנייה</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <style></style>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header class="header">
@@ -57,40 +51,26 @@
       </nav>
       <img id="header-logo" src="./photos/logo.png" alt="logo" />
     </header>
-    <main>
-      <div class="layout">
-        <div class="container">
-          <div>
-            <h1>מוקד תקלות עירוני של מעלה אלונים</h1>
-            <h2>אני רוצה:</h2>
-          </div>
-
-          <div class="primary-actions">
-            <a href="Open.html" class="link-cube">
-              <img
-                src="icons\lightbulb-exclamation.png"
-                alt=""
-                class="option-icon"
-              />
-              פתיחת תקלה מקוונת</a
-            >
-            <a href="List_page.html" class="link-cube"
-              ><img src="icons\list.png" alt="list" class="option-icon" />רשימת
-              תקלות
-            </a>
-
-            <a href="Status.html" class="link-cube">
-              <img
-                src="icons\calendar-exclamation.png"
-                alt=""
-                class="option-icon"
-              />
-              בירור סטטוס פנייה</a
-            >
-          </div>
-        </div>
+    <form action="#" method="get" name="check" id="check-status-form">
+      <h2><strong>איתור פנייה</strong></h2>
+      <div class="form-group">
+        <label for="ticket-number">מספר פנייה</label>
+        <input
+          type="text"
+          id="ticket-number"
+          name="ticket-id"
+          placeholder="לדוגמה: #123456"
+          required
+        />
       </div>
-    </main>
+
+      <button type="submit" class="status-btn" id="checking">בדוק סטטוס</button>
+    </form>
+
+    <div id="result-container"></div>
+
+    <script src="status.js"></script>
+    <a href="index.html" class="back-homepage"> בחזרה לדף הבית </a>
     <footer>
       <a href="notfound.html" class="foot-buttom">
         <img

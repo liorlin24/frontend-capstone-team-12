@@ -57,7 +57,7 @@
       </nav>
       <img id="header-logo" src="./photos/logo.png" alt="logo" />
     </header>
-    <div class="open-info">
+    <div class="open-info" style="direction: rtl;">
       <h1>פתיחת תקלה</h1>
       <div>
         <img src="./icons/writing.png" alt="writing" class="option-icon" />ספרו
@@ -110,9 +110,7 @@
             type="email"
             name="email"
             id="email"
-            required
-            placeholder="you@example.com"
-          />
+            required placeholder="you@example.com"/>
         </div>
         <div class="form-group">
           <label for="category">נושא הפנייה<span style="color: red">*</label><br />
@@ -133,6 +131,7 @@
             <option>חניה</option>
             <option>פיקוח עירוני</option>
             <option>ריהוט רחוב</option>
+            <option>בטיחות</option>
             <option>אחר</option>
           </select>
         </div>
@@ -150,7 +149,7 @@
           <label for="street-num">מספר בית
             <span style="color: red">*</label><br>
           <input 
-            type="text"
+            type="number"
             id="house-number"
             name="house-number"
             placeholder="מספר בית"
@@ -170,8 +169,7 @@
         </div>
         <div class="form-group">
           <label for="file-upload" class="file-label"
-            >צירוף תמונה</label
-          >
+            >צירוף תמונה</label >
 
           <input
             type="file"
@@ -195,24 +193,22 @@
 
         <div
           id="result-container"
-           
           style="
             display: none;
-            width: 400px;
-            margin-top: -36px;
+            margin-top: 15px;
             padding: 15px;
+            border: 2px solid #4caf50;
             background-color: #f9fff9;
             border-radius: 8px;
-            box-shadow: -4px 9px 12px 9px rgba(0, 0, 0, 0.48);
           "
         ></div>
       </form>
     </div>
-   <a href="index.html" class="back-homepage"> בחזרה לדף הבית </a>
+    <a href="index.html" class="back-homepage"> בחזרה לדף הבית </a>
 
     <script src="openform.js"></script>
     <footer>
-      <a href="" class="foot-buttom">
+      <a href="notfound.html" class="foot-buttom">
         <img
           src="icons\triangle-warning.png"
           alt="emergency"
@@ -220,7 +216,7 @@
         />
         הירשמו לעדכוני החירום
       </a>
-      <a href="" class="foot-buttom">
+      <a href="notfound.html" class="foot-buttom">
         <img
           src="icons\instagram-circle.png"
           alt="social-media"

@@ -82,7 +82,7 @@ nav {
 }
 
 .container {
-  max-width: 680px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 20px;
   background-color: aliceblue;
@@ -109,7 +109,7 @@ nav {
   background-color: rgb(254, 253, 255);
   color: #333;
   padding: 30px;
-  max-width: 200px;
+  width: 166px;
   border-radius: 20px;
   text-decoration: solid;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -193,11 +193,10 @@ footer {
   border-radius: 10px;
   background-color: #ffffff;
   height: 30px;
-  width: 257px;
+  min-width: 265px;
 }
 ::file-selector-button {
   border: 1px solid rgb(103, 102, 102);
-  padding: 4px 1px;
   border-radius: 5px;
   background-color: #a6a3a3;
   margin: 3px;
@@ -457,7 +456,7 @@ form option {
 }
 
 .tables-container {
-  max-width: 680px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 20px;
   background-color: aliceblue;
@@ -494,11 +493,9 @@ form option {
 
   header {
     height: auto;
-
     flex-direction: column;
     background-color: #f1ffe6;
-
-    padding: 15px 0;
+    padding: 15px 15px;
   }
 
   .menu-drop .menu-btn {
@@ -528,11 +525,23 @@ form option {
     font-size: 16px;
     background-color: #f1ffe6;
   }
-
+  #check-status-form {
+    width: 70% !important;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    height: auto !important;
+  }
+  #ticket-number {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    font-size: medium;
+    text-align: center;
+  }
   .container,
   .primary_container,
   #form,
-  #check-status-form,
   .tables-container {
     width: 92%;
 
@@ -570,16 +579,23 @@ form option {
   }
   #result-container {
     margin-top: 30px !important;
-    width: 50% !important;
+    width: 70% !important;
   }
 
   body {
-    overflow-x: hidden;
+    justify-content: space-between;
   }
   .form-group {
-    flex-direction: column;
-    align-items: center;
     padding: 0px 15px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 17px;
+    gap: 10px;
+  }
+  form select {
+    margin-left: 5px;
+    margin-bottom: 30px;
   }
 
   .form-group label {
@@ -594,6 +610,8 @@ form option {
     width: 100%;
     font-size: 22px;
     margin-top: -7px;
+    margin-left: 10px;
+    padding-left: -28px;
   }
 
   .options {
@@ -632,7 +650,7 @@ form option {
     height: 86px;
     padding: 0px;
     flex-wrap: wrap;
-    margin-bottom: -24px;
+    margin-bottom: -50px;
   }
   .open-info {
     max-width: 680px;
@@ -699,8 +717,8 @@ form option {
     min-height: 70px !important;
     padding: 10px 20px !important;
     display: flex !important;
-    flex-direction: row-reverse !important;
-    justify-content: space-between !important;
+    /* flex-direction: row-reverse !important; */
+    justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     box-sizing: border-box !important;

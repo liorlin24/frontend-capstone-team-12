@@ -1,50 +1,36 @@
 document
   .getElementById("check-status-form")
   .addEventListener("submit", function (e) {
-    e.preventDefault(); // מונע את רענון הדף
+    e.preventDefault();
 
-    // 1. קבלת המספר מהשדה
     const inputField = document.getElementById("ticket-number");
     const inputVal = inputField.value.trim();
 
-    // ניקוי הסולמית (#) אם המשתמש הקליד אותה, כי המפתח בזיכרון הוא רק המספרים
     const searchId = inputVal.replace("#", "");
 
-    // 2. חיפוש בזיכרון
     const storedDataString = localStorage.getItem(searchId);
     const resultDiv = document.getElementById("result-container");
 
-    // איפוס התצוגה לפני שמראים תוצאה חדשה
     resultDiv.style.display = "block";
-    resultDiv.className = ""; // מנקה עיצובים קודמים
+    resultDiv.className = "";
 
-    // 3. לוגיקת בדיקה
     if (storedDataString) {
-      // --- מצב הצלחה: הפנייה נמצאה ---
       const data = JSON.parse(storedDataString);
-
       resultDiv.style.opacity = 1;
-      // הוספת עיצוב של הצלחה
+
       resultDiv.classList.add("success-box");
 
-      // בניית ה-HTML של התוצאה
       resultDiv.innerHTML = `
-      <div class = "result-container">
-            <h3>נמצאה פנייה!</h3>
+            <h3 style="color: #4CAF50; margin-top:0;">נמצאה פנייה!</h3>
             <p><strong>שם איש קשר:</strong> ${data.full_name}</p>
-            <p><strong>מספר טלפון:</strong> ${data.phone_num}</p>
             <p><strong>מספר פנייה:</strong> ${data.formattedId}</p>
             <p><strong>תאריך פתיחה:</strong> ${data.date}</p>
-            <p><strong>קטגוריה: ${data.category}</p>
-            <p><strong>סטטוס נוכחי:</strong> <span style = padding: 2px 5px; border-radius: 3px;">${data.status}</span></p>
-            </div>
+            <p><strong>כתובת:</strong> ${data.address} ${data.house}</p>
+            <p><strong>קטגוריה:</strong> ${data.category}</p>
+            <p><strong>סטטוס נוכחי:</strong> <span style="padding: 2px 5px; border-radius: 3px;">${data.status}</span></p>
         `;
     } else {
-      // --- מצב שגיאה: הפנייה לא נמצאה ---
-
-      // הוספת עיצוב של שגיאה
       resultDiv.classList.add("error-box");
-      resultDiv.style.opacity = 1;
 
       resultDiv.innerHTML = `
             <h3 style="margin-top:0;">שגיאה</h3>
@@ -53,6 +39,5 @@ document
         `;
     }
 
-    // אופציונלי: מנקה את שדה הקלט
     inputField.value = "";
   });

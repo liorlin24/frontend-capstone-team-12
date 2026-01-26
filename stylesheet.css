@@ -193,22 +193,24 @@ footer {
   border-radius: 10px;
   background-color: #ffffff;
   height: 30px;
-  min-width: 265px;
+  min-width: 257px;
 }
 ::file-selector-button {
   border: 1px solid rgb(103, 102, 102);
-  border-radius: 5px;
-  background-color: #a6a3a3;
-  margin: 3px;
+  border-radius: 15px;
+  background-color: #6f6e6e;
+  margin-top: 7px;
+  margin-right: 3px;
+  color: white;
 }
 form option {
   border-bottom: #070606 10px;
 }
 .form-group {
   display: flex;
-  align-items: center;
-  gap: 5px;
-  padding-right: 45px;
+  margin-left: 25px;
+  justify-content: space-between;
+  margin-right: 25px;
 }
 
 .form-check {
@@ -217,8 +219,12 @@ form option {
   margin-left: 65px;
 }
 #description {
-  width: 250px;
-  height: 70px;
+  background: rgba(255, 255, 255, 0.608);
+  color: #000000;
+  border-radius: 10px;
+  border: 1px solid #070606;
+  min-width: 250px;
+  height: 50px;
 }
 .form-group::placeholder {
   color: #060606;
@@ -267,7 +273,7 @@ form option {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #2dda9b;
+  background-color: #2d8dda;
   border: none;
   border-radius: 15px;
   box-shadow: 0 3px #78777745;
@@ -279,12 +285,10 @@ form option {
   font-size: 24px;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
   color: #fff;
-  background-color: #2dda9b;
+  background-color: #2d8dda;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 3px #78777745;
 }
 .submit-btn:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
@@ -367,17 +371,24 @@ form option {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 #result-container {
-  width: 500px;
+  width: 440px;
   margin: 40px auto;
-  background-color: aliceblue;
-  border-radius: 20px;
   direction: rtl;
   text-align: center;
-  box-shadow: -10px 10px 15px 15px rgba(0, 0, 0, 0.48);
+  box-shadow: -5px 8px 13px 6px rgba(0, 0, 0, 0.48);
   padding-bottom: 20px;
-  opacity: 0;
   font-family: sans-serif;
+  display: none;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f9fff9;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
+#success-box {
+  width: 50%;
+}
+
 .modal_overlay {
   display: none;
   position: fixed;
@@ -390,23 +401,8 @@ form option {
   overflow-y: auto;
 }
 
-.close_btn {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  font-size: 35px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.close_btn:hover {
-  color: #e74c3c;
-}
-
 .search-btn {
-  background-color: #04aa6d;
+  background-color: #2d8dda;
   color: white;
   padding: 12px 30px;
   font-size: 18px;
@@ -419,7 +415,8 @@ form option {
 }
 
 .search-btn:hover {
-  background-color: #038d5a;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .search-btn:active {
   box-shadow: 0 2px #666;
@@ -436,6 +433,12 @@ form option {
   color: #040504;
   font-family: sans-serif;
   font-size: xx-large;
+}
+.table-select {
+  justify-content: space-between;
+}
+.success-box {
+  background-color: #04aa6d;
 }
 
 .trash_waste_schedule th,
@@ -539,9 +542,19 @@ form option {
     font-size: medium;
     text-align: center;
   }
+  #form {
+    width: 92%;
+    min-width: 92% !important;
+    box-sizing: border-box;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .submit-btn {
+  }
   .container,
   .primary_container,
-  #form,
   .tables-container {
     width: 92%;
 
@@ -586,22 +599,36 @@ form option {
     justify-content: space-between;
   }
   .form-group {
-    padding: 0px 15px;
     justify-content: center;
     flex-direction: column;
     display: flex;
     margin-top: 17px;
-    gap: 10px;
+    gap: 5px;
+    min-width: 20%;
+    width: 70%;
+    align-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
   }
   form select {
     margin-left: 5px;
-    margin-bottom: 30px;
+    max-width: 100%;
+    height: 39px;
+    width: 100%;
+    font-size: initial;
+    margin-top: -7px;
+    margin-left: 10px;
+    text-align: center;
   }
 
   .form-group label {
-    text-align: right;
+    text-align: center;
 
     margin-bottom: 5px;
+  }
+  .form-check {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   .form-group input {

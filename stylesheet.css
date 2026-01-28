@@ -381,8 +381,8 @@ form option {
   display: none;
   margin-top: 15px;
   padding: 15px;
-  background-color: #f9fff9;
-  border-radius: 8px;
+  background-color: #e0fbff;
+  border-radius: 35px;
   margin-bottom: 10px;
 }
 #success-box {
@@ -436,11 +436,12 @@ form option {
 }
 .table-select {
   justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  width: 370px;
 }
-.success-box {
-  background-color: #04aa6d;
-}
-
 .trash_waste_schedule th,
 .trash_waste_schedule td {
   border: 2px solid black;
@@ -483,7 +484,7 @@ form option {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #header-logo {
     width: 50% !important;
 
@@ -495,6 +496,7 @@ form option {
   }
 
   header {
+    width: 93%;
     height: auto;
     flex-direction: column;
     background-color: #f1ffe6;
@@ -549,16 +551,21 @@ form option {
     height: auto !important;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
   }
-  .submit-btn {
+  .primary_container {
+    width: 92%;
+    min-width: 92% !important;
+    margin: 20px auto;
+    padding: 0;
+    box-sizing: border-box;
+    height: auto !important;
   }
   .container,
-  .primary_container,
   .tables-container {
-    width: 92%;
+    width: 70%;
 
-    min-width: 92% !important;
+    min-width: 70% !important;
 
     margin: 20px auto;
 
@@ -567,6 +574,18 @@ form option {
     box-sizing: border-box;
 
     height: auto !important;
+  }
+  .table-select {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: baseline;
+    width: 80%;
+  }
+  .link-cube {
+    width: 145px;
+    font-size: smaller;
   }
   .tables {
     overflow-x: auto;
@@ -593,6 +612,7 @@ form option {
   #result-container {
     margin-top: 30px !important;
     width: 70% !important;
+    background-color: #dcfaff;
   }
 
   body {
@@ -605,11 +625,16 @@ form option {
     margin-top: 17px;
     gap: 5px;
     min-width: 20%;
-    width: 70%;
+    width: 80%;
     align-content: stretch;
     align-items: center;
     flex-wrap: wrap;
   }
+  #description {
+    min-width: 100%;
+    height: 70px;
+  }
+
   form select {
     margin-left: 5px;
     max-width: 100%;
@@ -629,6 +654,7 @@ form option {
   .form-check {
     margin-top: 15px;
     margin-bottom: 15px;
+    margin-left: 0;
   }
 
   .form-group input {
@@ -640,12 +666,14 @@ form option {
     margin-left: 10px;
     padding-left: -28px;
   }
+  .submit-btn {
+  }
 
   .options {
     width: 100%;
     grid-template-columns: 1fr 1fr;
     max-height: none;
-    margin-left: 45px;
+    padding-right: 0;
   }
 
   .option_cube {
@@ -674,11 +702,18 @@ form option {
 
   footer {
     display: flex;
-    height: 86px;
+    height: 85px;
     padding: 0px;
     flex-wrap: wrap;
     margin-bottom: -50px;
+    background-color: #787777;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+    align-content: center;
   }
+
   .open-info {
     max-width: 680px;
     background-color: aliceblue;
@@ -771,8 +806,8 @@ form option {
     width: auto !important;
     font-size: 14px !important;
     padding: 5px 10px !important;
-    border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
-    white-space: nowrap !important;
+    border-left: 1px solid rgba(0, 0, 0, 1);
+    white-space: inherit;
   }
 
   .container,
@@ -791,6 +826,8 @@ form option {
     grid-template-columns: 1fr 1fr !important;
     gap: 20px !important;
     width: 100% !important;
+    margin: 0;
+    padding-right: 0;
   }
 
   .option_cube {
@@ -802,5 +839,23 @@ form option {
 
   body {
     background-attachment: fixed !important;
+  }
+  .tables-container {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 20px auto !important;
+    padding: 30px !important;
+    border-radius: 20px !important;
+    box-sizing: border-box !important;
+  }
+  .trash_waste_schedule table {
+    width: 100%;
+  }
+  .tables {
+    box-sizing: border-box;
+  }
+  .primary-actions {
+    display: grid;
+    gap: 10px;
   }
 }

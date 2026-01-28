@@ -24,7 +24,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
   const resultDiv = document.getElementById("result-container");
 
   resultDiv.innerHTML = `
-        <h3 style="color: #7b7d7b; margin: 0;">הפנייה נשלחה בהצלחה!</h3>
+        <h3 style="margin: 0;">הפנייה נשלחה בהצלחה!</h3>
         <p>מספר התיק שלך למעקב: <strong>${caseNumber}</strong></p>
         <p style="font-size: 0.9em; color: gray;">( שמור את המספר הזה לבירור סטטוס הפנייה)</p>
     `;

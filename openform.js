@@ -33,6 +33,8 @@ document.getElementById("form").addEventListener("submit", function (e) {
   resultDiv.style.opacity = "1";
 
   document.getElementById("submit-btn").style.display = "none";
+  document.getElementById("form").style.display = "none";
+  document.getElementById("open-info").style.display = "none";
 
   e.target.reset();
 });

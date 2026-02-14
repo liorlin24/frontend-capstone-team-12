@@ -38,6 +38,7 @@ document
             <p>אנא וודא שהמספר נכון ונסה שוב.</p>
         `;
     }
+    document.getElementById("check-status-form").style.display = "none";
 
     inputField.value = "";
   });

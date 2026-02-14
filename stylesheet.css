@@ -24,7 +24,7 @@ header {
   width: 100%;
   display: flex;
   height: 80px;
-  background-color: #f1ffe6;
+  background-color: #cddffc;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   align-items: center;
 }
@@ -371,20 +371,20 @@ form option {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 #result-container {
-  width: 440px;
-  margin: 40px auto;
+  width: 500px;
   direction: rtl;
   text-align: center;
-  box-shadow: -5px 8px 13px 6px rgba(0, 0, 0, 0.48);
-  padding-bottom: 20px;
+  box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 0.48);
   font-family: sans-serif;
   display: none;
   margin-top: 15px;
-  padding: 15px;
-  background-color: #e0fbff;
-  border-radius: 35px;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 20px;
   margin-bottom: 10px;
+  align-items: center;
 }
+
 #success-box {
   width: 50%;
 }
@@ -499,7 +499,7 @@ form option {
     width: 93%;
     height: auto;
     flex-direction: column;
-    background-color: #f1ffe6;
+    background-color: #cddffc;
     padding: 15px 15px;
   }
 
@@ -514,12 +514,13 @@ form option {
     min-width: unset;
     gap: 0;
     height: 34px;
-    overflow: scroll;
     transition: height 0.3s ease-in;
+    overflow: hidden;
   }
 
   .menu-drop.open {
     height: 200px;
+    overflow-y: scroll;
   }
 
   .side-button {
@@ -528,7 +529,7 @@ form option {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 12px 0;
     font-size: 16px;
-    background-color: #f1ffe6;
+    background-color: #cddffc;
   }
   #check-status-form {
     width: 70% !important;
@@ -611,8 +612,8 @@ form option {
   }
   #result-container {
     margin-top: 30px !important;
-    width: 70% !important;
-    background-color: #dcfaff;
+    width: 80% !important;
+    background-color: #cddffc;
   }
 
   body {
